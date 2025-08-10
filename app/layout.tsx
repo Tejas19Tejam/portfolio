@@ -1,7 +1,8 @@
 import type { Metadata } from "next";
 import { Roboto } from "next/font/google";
 import "@/app/_styles/globals.css";
-import Header from "./_components/custom/Header";
+import { ThemeProvider } from "./_providers/theme-provider";
+import { Header, ModeToggle } from "./_components/custom";
 
 const geistSans = Roboto({
   variable: "--font-roboto-sans",
@@ -10,7 +11,7 @@ const geistSans = Roboto({
 });
 
 export const metadata: Metadata = {
-  title: "Vasudev Tejam Portfolio",
+  title: "Vasudev Tejam",
   description:
     "Portfolio of Vasudev Tejam a Full Stack Developer with 3 years of experience",
 };
@@ -21,14 +22,22 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en">
+    <html lang="en" suppressHydrationWarning>
       <body
         className={`${geistSans.variable} flex flex-col min-h-screen relative`}
       >
-        <Header />
-        <main className="max-w-7xl flex-1 px-8  grid grid-cols-12 mx-auto w-full">
-          {children}
-        </main>
+        <ThemeProvider
+          attribute="class"
+          defaultTheme="system"
+          enableSystem
+          disableTransitionOnChange
+        >
+          <Header />
+          <main className=" flex-1 px-8  grid grid-cols-12 mx-auto w-full">
+            {children}
+          </main>
+          <ModeToggle />
+        </ThemeProvider>
       </body>
     </html>
   );
