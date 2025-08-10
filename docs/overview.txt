@@ -1,0 +1,36 @@
+Portfolio : 
+
+Portfolio : https://github.com/emmabostian/developer-portfolios?tab=readme-ov-file
+
+Tech Stack : 
+1. NextJS
+2. Tailwind
+3. FramerMotion
+4. Sanity
+5. TypeScript
+
+Features :
+ 
+Dark Mode (ref : https://www.abhishekworks.com/)
+GitHub Contribution Graph (ref : https://www.abhishekworks.com/)
+Testimonioals (ref : https://dhlananh-dev-portfolio.vercel.app/)
+FAQ (ref : https://dhlananh-dev-portfolio.vercel.app/)
+Provide view online resume and download resume option (ref : https://dhlananh-dev-portfolio.vercel.app/)
+Button to go top 
+
+
+About me section 
+Header section - https://www.rammaheshwari.com/
+Goal Section (ref : https://dhlananh-dev-portfolio.vercel.app/)
+Skills section (ref : https://aditiarya.netlify.app/)
+Experience Section
+Projects Section
+FAQ Section
+Articles Sections
+Contacts section
+
+
+GIF : https://ankitdey.vercel.app/
+
+
+
