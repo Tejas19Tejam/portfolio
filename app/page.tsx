@@ -1,3 +1,23 @@
+import {
+  Hero,
+  About,
+  Skills,
+  Projects,
+  Experience,
+  Contact,
+  Footer,
+} from "@/app/_components/custom";
+
 export default function Home() {
-  return <h1>Hero Section</h1>;
+  return (
+    <>
+      <Hero />
+      <About />
+      <Skills />
+      <Projects />
+      <Experience />
+      <Contact />
+      <Footer />
+    </>
+  );
 }

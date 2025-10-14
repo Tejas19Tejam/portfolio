@@ -1,3 +1,10 @@
 export { default as Navigation } from "@/app/_components/custom/navigation";
 export { default as Header } from "@/app/_components/custom/header";
 export { default as ModeToggle } from "@/app/_components/custom/mode-toggle";
+export { default as Hero } from "@/app/_components/custom/hero";
+export { default as About } from "@/app/_components/custom/about";
+export { default as Skills } from "@/app/_components/custom/skills";
+export { default as Projects } from "@/app/_components/custom/projects";
+export { default as Experience } from "@/app/_components/custom/experience";
+export { default as Contact } from "@/app/_components/custom/contact";
+export { default as Footer } from "@/app/_components/custom/footer";

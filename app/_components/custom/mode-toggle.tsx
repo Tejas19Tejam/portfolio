@@ -4,7 +4,13 @@ import { useTheme } from "next-themes";
 import { Moon, Sun } from "lucide-react";
 import { Button } from "../ui/button";
 
-function ModeToggle() {
+interface ModeToggleProps {
+  className?: string;
+}
+
+function ModeToggle({
+  className = "fixed bottom-2 right-2 z-50",
+}: ModeToggleProps) {
   const { resolvedTheme, setTheme } = useTheme();
 
   function handleToggleMode() {
@@ -17,7 +23,7 @@ function ModeToggle() {
   }
 
   return (
-    <div className="fixed bottom-2 right-2 z-50">
+    <div className={className}>
       <Button
         variant="outline"
         size="icon"
