@@ -2,7 +2,8 @@ import type { Metadata } from "next";
 import { Inter, Poppins } from "next/font/google";
 import "@/app/_styles/globals.css";
 import { ThemeProvider } from "./_providers/theme-provider";
-import { Header, ModeToggle } from "./_components/custom";
+import Header from "./_components/custom/header";
+import ModeToggle from "./_components/custom/mode-toggle";
 
 const inter = Inter({
   variable: "--font-inter",
