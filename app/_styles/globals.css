@@ -104,10 +104,76 @@ body {
 
 /* Gradient text */
 .gradient-text {
-  background: linear-gradient(135deg, hsl(var(--primary)), hsl(var(--chart-1)));
+  background: linear-gradient(
+    135deg,
+    oklch(0.21 0.034 264.665),
+    oklch(0.646 0.222 41.116),
+    oklch(0.488 0.243 264.376)
+  );
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   background-clip: text;
+  color: oklch(
+    0.21 0.034 264.665
+  ); /* fallback for browsers that don't support background-clip */
+}
+
+/* Dark mode gradient text */
+.dark .gradient-text {
+  background: linear-gradient(
+    135deg,
+    oklch(0.928 0.006 264.531),
+    oklch(0.696 0.17 162.48),
+    oklch(0.488 0.243 264.376)
+  );
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  color: oklch(0.928 0.006 264.531); /* fallback for dark mode */
+}
+
+/* Enhanced gradient text with better visibility */
+.gradient-text-enhanced {
+  background: linear-gradient(
+    135deg,
+    oklch(0.21 0.034 264.665),
+    oklch(0.646 0.222 41.116),
+    oklch(0.488 0.243 264.376),
+    oklch(0.627 0.265 303.9)
+  );
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  background-size: 200% 200%;
+  animation: gradientShift 3s ease-in-out infinite;
+  color: oklch(0.21 0.034 264.665);
+  font-weight: 600;
+  text-shadow: 0 0 20px rgba(33, 34, 67, 0.3);
+}
+
+.dark .gradient-text-enhanced {
+  background: linear-gradient(
+    135deg,
+    oklch(0.928 0.006 264.531),
+    oklch(0.696 0.17 162.48),
+    oklch(0.769 0.188 70.08),
+    oklch(0.488 0.243 264.376)
+  );
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  color: oklch(0.928 0.006 264.531);
+  text-shadow: 0 0 20px rgba(255, 255, 255, 0.2);
+}
+
+@keyframes gradientShift {
+  0%,
+  100% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
 }
 
 @theme inline {
