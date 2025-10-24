@@ -3,6 +3,11 @@
 import { useState, useEffect, useRef } from "react";
 import { Code2, Database, Palette, Server, Globe, Zap } from "lucide-react";
 
+const aboutSectionData = {
+  role: "Full Stack Developer",
+  experience: "3+",
+};
+
 function About() {
   const [isVisible, setIsVisible] = useState(false);
   const sectionRef = useRef<HTMLDivElement>(null);
@@ -32,6 +37,7 @@ function About() {
     { name: "Node.js", icon: "🟢", category: "Backend" },
     { name: "Django", icon: "🐍", category: "Backend" },
     { name: "MongoDB", icon: "🍃", category: "Database" },
+    { name: "Supabase", icon: "🟢", category: "Database" },
     { name: "Figma", icon: "🎯", category: "Design" },
     { name: "Sanity CMS", icon: "📝", category: "CMS" },
   ];
@@ -108,7 +114,7 @@ function About() {
                 <p className="text-muted-foreground leading-relaxed">
                   With{" "}
                   <span className="font-semibold text-primary">
-                    3+ years of experience
+                    2+ years of experience
                   </span>{" "}
                   in full-stack development, I specialize in building modern,
                   scalable web applications. My journey began with a passion for
@@ -121,8 +127,8 @@ function About() {
                 <p className="text-muted-foreground leading-relaxed">
                   I thrive on transforming complex requirements into elegant,
                   user-friendly solutions. From crafting intuitive frontends
-                  with React and Next.js to building robust backends with
-                  Node.js and Django, I bring a holistic approach to every
+                  with React (TypeScript) and Next.js to building robust
+                  backends with Node.js, I bring a holistic approach to every
                   project.
                 </p>
               </div>
@@ -146,10 +152,9 @@ function About() {
               <div className="bg-gradient-to-r from-blue-50 to-purple-50 dark:from-blue-900/20 dark:to-purple-900/20 p-6 rounded-lg">
                 <h4 className="font-semibold mb-2">Fun Fact</h4>
                 <p className="text-muted-foreground">
-                  When I&apos;m not coding, you&apos;ll find me exploring new
-                  coffee shops, reading about emerging technologies, or
-                  contributing to open-source projects. I believe great software
-                  is built by passionate people! ☕️
+                  When I&apos;m not coding, you&apos;ll find me listening to
+                  music, reading about emerging technologies. I believe great
+                  software is built by passionate people! 🎶
                 </p>
               </div>
             </div>

@@ -29,22 +29,27 @@ function Projects() {
   const projects = [
     {
       id: 1,
-      title: "E-Commerce Platform",
+      title: "The Wild Oasis",
       description:
-        "A full-stack e-commerce solution with advanced features including real-time inventory management, payment processing, and admin dashboard.",
+        "A customer-facing website that allows guests to explore information about the hotel and cabins, check availability, make and manage reservations, and maintain a personal profile.",
       image: "/api/placeholder/600/400",
-      technologies: ["Next.js", "Node.js", "MongoDB", "Stripe", "Tailwind CSS"],
+      technologies: [
+        "Next.js",
+        "React",
+        "Supabase",
+        "Context API",
+        "Tailwind CSS",
+      ],
       category: "fullstack",
       features: [
-        "User authentication & authorization",
-        "Product catalog with search & filtering",
-        "Shopping cart & checkout process",
-        "Payment gateway integration",
-        "Admin dashboard for inventory management",
-        "Real-time order tracking",
+        "Guests can view details and availability of cabins.",
+        "Users can create accounts, sign in, and manage profiles.",
+        "Authentication and authorization using NextAuth.js and Supabase.",
+        "Guests can make, update, or delete cabin reservations.",
+        "Filter cabins by capacity and view past or upcoming bookings.",
       ],
-      liveUrl: "https://demo-ecommerce.com",
-      githubUrl: "https://github.com/yourusername/ecommerce-platform",
+      liveUrl: "https://the-wild-oasis-website.vercel.app/",
+      githubUrl: "https://github.com/Tejas19Tejam/the-wild-oasis",
       status: "Completed",
     },
     {

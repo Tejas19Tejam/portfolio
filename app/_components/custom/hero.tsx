@@ -4,6 +4,21 @@ import { useState, useEffect } from "react";
 import { Button } from "@/app/_components/ui/button";
 import { ArrowDown, Github, Linkedin, Mail, ExternalLink } from "lucide-react";
 
+const heroSectionData = {
+  avatarInitials: "VT",
+  name: "Vasudev Tejam",
+  title: "Full Stack Developer",
+  tagline: `Building scalable web applications with modern technologies.
+              Passionate about creating exceptional user experiences with 3+
+              years of expertise in React, Next.js, Node.js, and cloud
+              technologies.`,
+  socialLinks: {
+    github: "https://www.github.com/Tejas19Tejam",
+    linkedin: "https://www.linkedin.com/in/vasudev-tejam/",
+    email: "mailto:tejas19tejam@gmail.com",
+  },
+};
+
 function Hero() {
   const [isVisible, setIsVisible] = useState(false);
 
@@ -41,7 +56,7 @@ function Hero() {
             }`}
           >
             <div className="w-32 h-32 mx-auto rounded-full bg-gradient-to-r from-blue-500 to-purple-600 flex items-center justify-center text-white font-bold text-4xl mb-4 shadow-2xl">
-              VT
+              {heroSectionData.avatarInitials}
             </div>
           </div>
 
@@ -52,10 +67,11 @@ function Hero() {
             }`}
           >
             <h1 className="text-4xl sm:text-5xl lg:text-7xl font-poppins font-bold mb-4">
-              Hi, I&apos;m <span className="gradient-text">Vasudev Tejam</span>
+              Hi, I&apos;m{" "}
+              <span className="gradient-text">{heroSectionData.name}</span>
             </h1>
             <h2 className="text-2xl sm:text-3xl lg:text-4xl font-poppins font-semibold text-muted-foreground mb-4">
-              Full Stack Developer
+              {heroSectionData.title}
             </h2>
           </div>
 
@@ -66,10 +82,7 @@ function Hero() {
             }`}
           >
             <p className="text-lg sm:text-xl text-muted-foreground max-w-2xl mx-auto leading-relaxed">
-              Building scalable web applications with modern technologies.
-              Passionate about creating exceptional user experiences with 3+
-              years of expertise in React, Next.js, Node.js, and cloud
-              technologies.
+              {heroSectionData.tagline}
             </p>
           </div>
 
@@ -116,7 +129,7 @@ function Hero() {
           >
             <div className="flex justify-center gap-6">
               <a
-                href="https://github.com"
+                href={heroSectionData.socialLinks.github}
                 target="_blank"
                 rel="noopener noreferrer"
                 className="p-3 rounded-full bg-muted hover:bg-primary hover:text-primary-foreground transition-all duration-300 transform hover:scale-110"
@@ -124,7 +137,7 @@ function Hero() {
                 <Github size={24} />
               </a>
               <a
-                href="https://linkedin.com"
+                href={heroSectionData.socialLinks.linkedin}
                 target="_blank"
                 rel="noopener noreferrer"
                 className="p-3 rounded-full bg-muted hover:bg-primary hover:text-primary-foreground transition-all duration-300 transform hover:scale-110"
@@ -132,7 +145,7 @@ function Hero() {
                 <Linkedin size={24} />
               </a>
               <a
-                href="mailto:your.email@gmail.com"
+                href={heroSectionData.socialLinks.email}
                 className="p-3 rounded-full bg-muted hover:bg-primary hover:text-primary-foreground transition-all duration-300 transform hover:scale-110"
               >
                 <Mail size={24} />

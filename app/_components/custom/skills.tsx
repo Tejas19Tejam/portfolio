@@ -28,12 +28,12 @@ function Skills() {
       title: "Frontend Development",
       icon: "🎨",
       skills: [
-        { name: "React", level: 90, color: "bg-blue-500" },
-        { name: "Next.js", level: 85, color: "bg-gray-800" },
-        { name: "JavaScript", level: 88, color: "bg-yellow-500" },
-        { name: "TypeScript", level: 80, color: "bg-blue-600" },
-        { name: "Tailwind CSS", level: 92, color: "bg-teal-500" },
         { name: "HTML/CSS", level: 95, color: "bg-orange-500" },
+        { name: "Tailwind CSS", level: 92, color: "bg-teal-500" },
+        { name: "React", level: 90, color: "bg-blue-500" },
+        { name: "JavaScript", level: 90, color: "bg-yellow-500" },
+        { name: "TypeScript", level: 75, color: "bg-blue-600" },
+        { name: "Next.js", level: 60, color: "bg-gray-400" },
       ],
     },
     {
@@ -41,11 +41,10 @@ function Skills() {
       icon: "⚙️",
       skills: [
         { name: "Node.js", level: 85, color: "bg-green-500" },
-        { name: "Django", level: 80, color: "bg-green-700" },
-        { name: "Express.js", level: 83, color: "bg-gray-600" },
-        { name: "Python", level: 78, color: "bg-blue-500" },
         { name: "RESTful APIs", level: 88, color: "bg-purple-500" },
-        { name: "GraphQL", level: 70, color: "bg-pink-500" },
+        { name: "Express.js", level: 83, color: "bg-gray-600" },
+        { name: "Django", level: 60, color: "bg-green-700" },
+        { name: "Python", level: 50, color: "bg-blue-500" },
       ],
     },
     {
@@ -53,11 +52,12 @@ function Skills() {
       icon: "🗃️",
       skills: [
         { name: "MongoDB", level: 82, color: "bg-green-600" },
-        { name: "PostgreSQL", level: 75, color: "bg-blue-700" },
+        { name: "PostgreSQL", level: 50, color: "bg-blue-700" },
+        { name: "Supabase", level: 70, color: "bg-yellow-400" },
         { name: "Git", level: 90, color: "bg-orange-600" },
-        { name: "Docker", level: 70, color: "bg-blue-500" },
-        { name: "AWS", level: 68, color: "bg-orange-500" },
         { name: "Vercel", level: 85, color: "bg-black" },
+        { name: "Docker", level: 40, color: "bg-blue-500" },
+        { name: "AWS", level: 60, color: "bg-orange-500" },
       ],
     },
     {
@@ -65,9 +65,7 @@ function Skills() {
       icon: "🎯",
       skills: [
         { name: "Figma", level: 80, color: "bg-purple-500" },
-        { name: "Adobe XD", level: 70, color: "bg-purple-600" },
         { name: "Sanity CMS", level: 85, color: "bg-red-500" },
-        { name: "Contentful", level: 75, color: "bg-blue-500" },
         { name: "UI/UX Design", level: 78, color: "bg-pink-500" },
         { name: "Responsive Design", level: 92, color: "bg-teal-600" },
       ],
@@ -166,13 +164,10 @@ function Skills() {
                 Microservices
               </span>
               <span className="px-3 py-1 bg-primary/10 text-primary rounded-full text-sm">
-                DevOps
+                DSA
               </span>
               <span className="px-3 py-1 bg-primary/10 text-primary rounded-full text-sm">
-                Web3
-              </span>
-              <span className="px-3 py-1 bg-primary/10 text-primary rounded-full text-sm">
-                Mobile Development
+                System Design
               </span>
             </div>
           </div>
