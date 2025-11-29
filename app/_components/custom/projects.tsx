@@ -3,6 +3,8 @@
 import { useState, useEffect, useRef } from "react";
 import { Button } from "@/app/_components/ui/button";
 import { ExternalLink, Github, ArrowRight } from "lucide-react";
+import Image from "next/image";
+import { cn } from "@/app/_lib/utils";
 
 function Projects() {
   const [isVisible, setIsVisible] = useState(false);
@@ -32,7 +34,7 @@ function Projects() {
       title: "The Wild Oasis",
       description:
         "A customer-facing website that allows guests to explore information about the hotel and cabins, check availability, make and manage reservations, and maintain a personal profile.",
-      image: "/api/placeholder/600/400",
+      image: "/images/projects/the-wild-oasis.png",
       technologies: [
         "Next.js",
         "React",
@@ -54,109 +56,105 @@ function Projects() {
     },
     {
       id: 2,
-      title: "Task Management App",
+      title: "Natours (Learning)",
       description:
-        "A collaborative project management tool with real-time updates, team collaboration features, and advanced analytics.",
-      image: "/api/placeholder/600/400",
+        "A full-stack tour-booking platform that lets users explore top-rated destinations, view detailed tour information, and securely book adventures online. The application features seamless payments powered by Stripe, dynamic server-rendered pages using Pug templates, and a robust backend built with Node.js, Express, and MongoDB for efficient data handling.",
+      image: "/images/projects/natours.jpeg",
       technologies: [
-        "React",
-        "Django",
-        "PostgreSQL",
-        "WebSocket",
-        "Material-UI",
+        "Node.js",
+        "Express",
+        "Pug Templates",
+        "Stripe API",
+        "HTML/CSS",
+        "MongoDB",
       ],
       category: "fullstack",
       features: [
-        "Real-time collaboration",
-        "Drag & drop task management",
-        "Team member assignment",
-        "Progress tracking & analytics",
-        "File attachments & comments",
-        "Email notifications",
+        "Browse top-rated tours with detailed information, pricing, and ratings.",
+        "Secure online booking system enabling users to reserve tours seamlessly.",
+        "Integrated Stripe payment gateway for safe, fast, and reliable transactions.",
+        "Responsive UI built with Pug templates, optimized for performance and accessibility.",
+        "Dynamic tour management powered by Node.js, Express, and MongoDB.",
+        "User authentication.",
       ],
-      liveUrl: "https://demo-taskmanager.com",
-      githubUrl: "https://github.com/yourusername/task-manager",
+      liveUrl: "https://natours.dev/",
+      githubUrl: "https://github.com/Tejas19Tejam/natours",
       status: "Completed",
     },
     {
       id: 3,
-      title: "Weather Dashboard",
+      title: "AI-Powered Task Management Application",
       description:
-        "A responsive weather application with location-based forecasts, interactive maps, and personalized weather alerts.",
-      image: "/api/placeholder/600/400",
-      technologies: ["React", "OpenWeather API", "Chart.js", "Tailwind CSS"],
-      category: "frontend",
-      features: [
-        "Current weather conditions",
-        "5-day weather forecast",
-        "Interactive weather maps",
-        "Location-based search",
-        "Weather alerts & notifications",
-        "Responsive design",
+        "A smart and intuitive task management system that helps users plan, track, and complete their daily, weekly, and monthly tasks. The application provides intelligent insights, performance analytics, and personalized productivity plans powered by AI.",
+      image: "",
+      technologies: [
+        "React",
+        "Nodejs",
+        "PostgresQL",
+        "Prisma",
+        "TailwindCSS",
+        "Zod",
       ],
-      liveUrl: "https://demo-weather.com",
-      githubUrl: "https://github.com/yourusername/weather-dashboard",
-      status: "Completed",
+      category: "fullstack",
+      features: [
+        "Create and manage daily, weekly, and monthly tasks with a clean and structured UI.",
+        "Smart notification system that reminds users of upcoming or pending tasks.",
+        "AI-powered productivity insights that analyze task completion patterns.",
+        "AI-generated personalized plans to help users manage time and complete tasks efficiently.",
+        "Advanced validation using Zod for reliable and error-free form handling.",
+        "Dashboard with visual analytics to track performance trends over time.",
+        "Support for task categories, priorities, and progress tracking.",
+        "Optional suggestions to break large tasks into manageable subtasks.",
+      ],
+      liveUrl: "",
+      githubUrl: "",
+      status: "In Progress",
     },
     {
       id: 4,
-      title: "Blog CMS Platform",
+      title: "UsePopcorn (Learning)",
       description:
-        "A headless CMS built with Sanity and Next.js, featuring rich text editing, media management, and SEO optimization.",
-      image: "/api/placeholder/600/400",
-      technologies: ["Next.js", "Sanity CMS", "Vercel", "TypeScript"],
+        "A lightweight front-end movie discovery application built while learning the useEffect and component interaction patterns in . The app allows users to search for movies, view detailed information including  ratings, and create a personalized watchlist with custom user ratings.",
+      image: "/images/projects/use-popcorns.jpeg",
+      technologies: ["React", "HTML", "CSS", "Fetch API", "OMDb API"],
       category: "frontend",
       features: [
-        "Rich text editor",
-        "Media library management",
-        "SEO optimization",
-        "Multi-author support",
-        "Comment system",
-        "Social media integration",
+        "Search movies in real time using the OMDb API.",
+        "View detailed movie information including plot, poster, actors, and IMDb rating.",
+        "Rate movies manually based on personal preference.",
+        "Add movies to a persistent watchlist for later viewing.",
+        "Automatically track and display the total number of movies added.",
+        "Built to understand React's useEffect, state management, and component communication.",
       ],
-      liveUrl: "https://demo-blog.com",
-      githubUrl: "https://github.com/yourusername/blog-cms",
+      liveUrl: "https://ltpopcorn.vercel.app/",
+      githubUrl: "https://github.com/Tejas19Tejam/react-usepopcorns",
       status: "Completed",
     },
     {
       id: 5,
-      title: "API Gateway Service",
+      title: "MapTy (Learning)",
       description:
-        "A microservices API gateway with authentication, rate limiting, load balancing, and comprehensive monitoring.",
-      image: "/api/placeholder/600/400",
-      technologies: ["Node.js", "Express", "Redis", "Docker", "MongoDB"],
-      category: "backend",
-      features: [
-        "API rate limiting",
-        "Authentication & authorization",
-        "Load balancing",
-        "Request/response logging",
-        "Health monitoring",
-        "API documentation",
+        "A front-end workout tracking application built while learning core concepts of vanilla JavaScript, including DOM manipulation and event-driven architecture. The app allows users to log running and cycling workouts directly on an interactive map powered by , and stores all entries locally for persistent access.",
+      image: "/images/projects/mapty.png",
+      technologies: [
+        "HTML",
+        "CSS",
+        "JavaScript",
+        "Leaflet API",
+        "LocalStorage",
       ],
-      liveUrl: null,
-      githubUrl: "https://github.com/yourusername/api-gateway",
+      category: "frontend",
+      features: [
+        "Log running and cycling workouts by selecting a location on the map.",
+        "Automatically record workout details such as distance, duration, pace (min/km), and speed (km/h).",
+        "Render each workout visually on the map with custom markers.",
+        "Display detailed workout entries in a structured list view.",
+        "Persist all workouts using LocalStorage to maintain data even after page reloads.",
+        "Built to understand vanilla JavaScript, DOM manipulation, geolocation, and map rendering.",
+      ],
+      liveUrl: "https://mapty-app-tejas.netlify.app/",
+      githubUrl: "https://github.com/Tejas19Tejam/mapty-app",
       status: "Completed",
-    },
-    {
-      id: 6,
-      title: "Real-time Chat Application",
-      description:
-        "A modern chat application with real-time messaging, file sharing, and video call integration.",
-      image: "/api/placeholder/600/400",
-      technologies: ["React", "Socket.io", "Node.js", "WebRTC", "MongoDB"],
-      category: "fullstack",
-      features: [
-        "Real-time messaging",
-        "File & image sharing",
-        "Video & voice calls",
-        "Group chat rooms",
-        "Message history",
-        "Online status indicators",
-      ],
-      liveUrl: "https://demo-chat.com",
-      githubUrl: "https://github.com/yourusername/chat-app",
-      status: "In Progress",
     },
   ];
 
@@ -216,10 +214,18 @@ function Projects() {
             >
               {/* Project Image */}
               <div className="relative overflow-hidden">
-                <div className="w-full h-48 bg-gradient-to-r from-blue-500 to-purple-600 flex items-center justify-center">
-                  <span className="text-white text-6xl font-bold opacity-20">
-                    {project.title.charAt(0)}
-                  </span>
+                <div className="w-full h-50 bg-gradient-to-r from-blue-500 to-purple-600 flex items-center justify-center">
+                  {project.image ? (
+                    <Image
+                      src={project.image}
+                      alt="The Wild Oasis Image"
+                      fill
+                    />
+                  ) : (
+                    <span className="text-white text-6xl font-bold opacity-20">
+                      {project.title.charAt(0)}
+                    </span>
+                  )}
                 </div>
                 <div className="absolute top-4 right-4">
                   <span
@@ -291,9 +297,14 @@ function Projects() {
                   <Button
                     size="sm"
                     variant="outline"
-                    className={`${
-                      project.liveUrl ? "" : "flex-1"
-                    } flex items-center justify-center gap-2`}
+                    disabled={!project.liveUrl}
+                    className={cn(
+                      project.liveUrl
+                        ? ""
+                        : "flex-1 disabled:cursor-not-allowed",
+
+                      "flex items-center justify-center gap-2"
+                    )}
                     onClick={() => window.open(project.githubUrl, "_blank")}
                   >
                     <Github size={14} />
@@ -323,7 +334,7 @@ function Projects() {
             <Button
               size="lg"
               onClick={() =>
-                window.open("https://github.com/yourusername", "_blank")
+                window.open("https://github.com/Tejas19Tejam", "_blank")
               }
               className="bg-gradient-to-r from-blue-500 to-purple-600 hover:from-blue-600 hover:to-purple-700"
             >

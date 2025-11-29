@@ -21,7 +21,7 @@ function Header() {
 
   const handleDownloadResume = () => {
     // Add resume download functionality
-    window.open("/resume.pdf", "_blank");
+    window.open("/docs/resume.pdf", "_blank");
   };
 
   return (

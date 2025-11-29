@@ -27,84 +27,85 @@ function Experience() {
   const experiences = [
     {
       id: 1,
-      title: "Senior Full Stack Developer",
-      company: "TechCorp Solutions",
-      location: "Remote",
-      period: "2023 - Present",
+      title: "Full Stack Developer",
+      company: "Sumcircle Technology Pvt. Ltd.",
+      location: "Ghatkopar, Mumbai",
+      period: "Dec, 2024 - Present",
       type: "Full-time",
       description:
-        "Leading development of scalable web applications using React, Next.js, and Node.js. Mentoring junior developers and architecting solutions for enterprise clients.",
+        "Building scalable and high-performance web applications using React, Next.js, Node.js, and modern cloud technologies. Responsible for leading development initiatives, collaborating directly with clients to understand requirements, and delivering optimized solutions aligned with business objectives.",
       achievements: [
-        "Reduced application load time by 40% through performance optimization",
-        "Led a team of 4 developers on a major e-commerce platform",
-        "Implemented CI/CD pipeline reducing deployment time by 60%",
-        "Architected microservices infrastructure serving 100k+ users",
+        "Improved application performance by reducing load time by 40% through advanced optimization techniques.",
+        "Developed a complete Real Estate web application from the ground up, ensuring scalability and seamless user experience.",
+        "Architected and implemented an HRMS system serving over 10,000 users with reliable performance and modular design.",
       ],
       technologies: [
         "React",
-        "Next.js",
+        "MongoDB",
         "Node.js",
-        "PostgreSQL",
-        "AWS",
         "Docker",
+        "Sanity CMS",
+        "Django",
+        "Next.js",
+        "AWS",
+        "TypeScript",
       ],
     },
+
     {
       id: 2,
-      title: "Full Stack Developer",
-      company: "StartupXYZ",
-      location: "Hybrid",
-      period: "2022 - 2023",
+      title: "Assistant System Engineer",
+      company: "Tata Consultancy Services",
+      location: "Thane, Mumbai",
+      period: "June, 2023 - Dec, 2024",
       type: "Full-time",
       description:
-        "Developed and maintained web applications using Django and React. Collaborated with cross-functional teams to deliver products from conception to deployment.",
+        "Transitioned from an IT Support role into full-stack development, I worked on enhancing the NextStep recruitment portal by building responsive front-end features using React.js, TypeScript, and CSS Modules",
       achievements: [
-        "Built customer dashboard reducing support tickets by 50%",
-        "Integrated payment gateway processing $500k+ monthly transactions",
-        "Developed REST APIs used by mobile and web applications",
-        "Improved database query performance by 35%",
+        "Delivered responsive UI components that improved user experience for thousands of candidates on the NextStep portal.",
+        "Collaborated with UI/UX teams to implement pixel-perfect and accessibility-friendly interfaces across devices.",
+        "Maintained high code quality by participating in Agile sprints and performing structured code reviews using Jira.",
       ],
-      technologies: ["Django", "React", "MongoDB", "Redis", "Stripe API"],
+      technologies: ["React", "CSS Modules", "Nodejs", "HTML/CSS/JS", "Agile"],
     },
     {
       id: 3,
-      title: "Frontend Developer",
-      company: "Digital Agency Pro",
-      location: "On-site",
-      period: "2021 - 2022",
+      title: "Graduate Trainee",
+      company: "Tata Consultancy Services",
+      location: "Thane, Mumbai",
+      period: "Aug, 2022 - June, 2023",
       type: "Full-time",
       description:
-        "Created responsive and interactive user interfaces for various client projects. Worked closely with designers to implement pixel-perfect designs.",
+        "As a Graduate Trainee at Tata Consultancy Services for 10 months, I worked as an IT Support Coordinator responsible for resolving end-user hardware, software, and network issues. I also supported infrastructure activities including OS installations, basic router configuration, and on-site assistance for server and networking teams.",
       achievements: [
-        "Delivered 15+ client websites with 100% on-time completion",
-        "Improved website performance scores by average 30%",
-        "Implemented accessibility features meeting WCAG 2.1 standards",
-        "Mentored 2 junior developers in modern React practices",
+        "Resolved 200+ hardware, software, and network issues with a high first-call resolution rate, ensuring uninterrupted operations for internal users.",
+        "Supported on-ground infrastructure activities, including system setups and network configurations, improving IT response and service efficiency.",
       ],
-      technologies: [
-        "React",
-        "JavaScript",
-        "Tailwind CSS",
-        "Figma",
-        "WordPress",
-      ],
+      technologies: ["Azure AD", "HPDM", "Linux OS", "Window OS"],
     },
     {
       id: 4,
-      title: "Junior Web Developer",
-      company: "Freelance",
+      title: "Junior Developer",
+      company: "Cuvette",
       location: "Remote",
-      period: "2020 - 2021",
-      type: "Freelance",
+      period: "Feb 2023 - June, 2023",
+      type: "Internship",
       description:
-        "Started my journey as a freelance developer, building websites for small businesses and learning the fundamentals of web development.",
+        "Joined Cuvette as a Junior Developer Intern, where I built websites for small businesses while strengthening my fundamentals in front-end and back-end development. Worked on real-world projects that helped me gain hands-on experience across the full web development lifecycle.",
       achievements: [
-        "Completed 20+ freelance projects with 5-star ratings",
-        "Built e-commerce websites generating $100k+ in client revenue",
-        "Learned full-stack development through hands-on projects",
-        "Established long-term partnerships with 5 recurring clients",
+        "Built multiple production-ready websites for small business clients using modern web technologies.",
+        "Gained practical experience in the MERN stack by developing 4 complete full-stack projects.",
+        "Strengthened core skills in front-end development, API integration, and component-based architecture.",
       ],
-      technologies: ["HTML", "CSS", "JavaScript", "PHP", "MySQL", "WordPress"],
+      technologies: [
+        "HTML",
+        "CSS",
+        "JavaScript",
+        "React",
+        "Nodejs",
+        "MongoDB",
+        "Express",
+      ],
     },
   ];
 
@@ -116,17 +117,17 @@ function Experience() {
     },
     {
       label: "Projects Completed",
-      value: "50+",
+      value: "10+",
       icon: <Briefcase className="w-6 h-6" />,
     },
-    {
-      label: "Happy Clients",
-      value: "25+",
-      icon: <Award className="w-6 h-6" />,
-    },
+    // {
+    //   label: "Happy Clients",
+    //   value: "25+",
+    //   icon: <Award className="w-6 h-6" />,
+    // },
     {
       label: "Lines of Code",
-      value: "100k+",
+      value: "10k+",
       icon: <TrendingUp className="w-6 h-6" />,
     },
   ];
@@ -151,7 +152,7 @@ function Experience() {
 
         {/* Stats Section */}
         <div
-          className={`grid grid-cols-2 md:grid-cols-4 gap-6 mb-16 transition-all duration-1000 delay-200 ${
+          className={`grid grid-cols-2 md:grid-cols-3 gap-6 mb-16 transition-all duration-1000 delay-200 ${
             isVisible ? "animate-fadeInUp opacity-100" : "opacity-0"
           }`}
         >

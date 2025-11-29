@@ -1,6 +1,6 @@
 "use client";
 
-import { useState, useEffect, useRef } from "react";
+import { useState, useEffect, useRef, useTransition } from "react";
 import { Button } from "@/app/_components/ui/button";
 import {
   Mail,
@@ -12,14 +12,16 @@ import {
   Twitter,
   MessageCircle,
 } from "lucide-react";
+import { sendMail } from "@/app/_lib/actions";
 
 function Contact() {
   const [isVisible, setIsVisible] = useState(false);
+  const [isPending, startTransition] = useTransition();
   const [formData, setFormData] = useState({
-    name: "",
-    email: "",
-    subject: "",
-    message: "",
+    name: "VASUDEV",
+    email: "tejas19tejam@gmail.com",
+    subject: "Request",
+    message: "Are you able to join",
   });
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [submitStatus, setSubmitStatus] = useState<
@@ -62,8 +64,11 @@ function Contact() {
     try {
       // Here you would typically send the form data to your backend
       // await fetch('/api/contact', { method: 'POST', body: JSON.stringify(formData) });
+      startTransition(async () => {
+        const res = await sendMail(formData);
+        console.log(res);
+      });
 
-      await new Promise((resolve) => setTimeout(resolve, 1000));
       setSubmitStatus("success");
       setFormData({ name: "", email: "", subject: "", message: "" });
     } catch (error) {
@@ -78,14 +83,14 @@ function Contact() {
     {
       icon: <Mail className="w-6 h-6" />,
       label: "Email",
-      value: "vasudev.tejam@email.com",
-      href: "mailto:vasudev.tejam@email.com",
+      value: "tejas19tejam@gmail.com",
+      href: "mailto:tejas19tejam@gmail.com",
     },
     {
       icon: <Phone className="w-6 h-6" />,
       label: "Phone",
-      value: "+91 98765 43210",
-      href: "tel:+919876543210",
+      value: "+91 80801 87131",
+      href: "tel:+918080187131",
     },
     {
       icon: <MapPin className="w-6 h-6" />,
@@ -99,20 +104,14 @@ function Contact() {
     {
       icon: <Github className="w-5 h-5" />,
       label: "GitHub",
-      href: "https://github.com/yourusername",
+      href: "https://github.com/Tejas19Tejam",
       color: "hover:bg-gray-800 hover:text-white",
     },
     {
       icon: <Linkedin className="w-5 h-5" />,
       label: "LinkedIn",
-      href: "https://linkedin.com/in/yourusername",
+      href: "https://linkedin.com/in/vasudev-tejam",
       color: "hover:bg-blue-600 hover:text-white",
-    },
-    {
-      icon: <Twitter className="w-5 h-5" />,
-      label: "Twitter",
-      href: "https://twitter.com/yourusername",
-      color: "hover:bg-blue-400 hover:text-white",
     },
   ];
 

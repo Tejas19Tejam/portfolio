@@ -58,25 +58,24 @@ function Footer() {
               ))}
             </ul>
           </div>
-
           {/* Contact & Social */}
           <div>
             <h4 className="font-semibold mb-4">Get in Touch</h4>
             <div className="space-y-2 text-sm text-muted-foreground">
               <div>
                 <a
-                  href="mailto:vasudev.tejam@email.com"
+                  href="mailto:tejas19tejam@gmail.com"
                   className="hover:text-primary transition-colors"
                 >
-                  vasudev.tejam@email.com
+                  tejas19tejam@gmail.com
                 </a>
               </div>
               <div>
                 <a
-                  href="tel:+919876543210"
+                  href="tel:+918080187131"
                   className="hover:text-primary transition-colors"
                 >
-                  +91 98765 43210
+                  +91 80801 87131
                 </a>
               </div>
               <div>Mumbai, India</div>

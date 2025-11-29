@@ -9,12 +9,12 @@ const heroSectionData = {
   name: "Vasudev Tejam",
   title: "Full Stack Developer",
   tagline: `Building scalable web applications with modern technologies.
-              Passionate about creating exceptional user experiences with 3+
+              Passionate about creating exceptional user experiences with 2+
               years of expertise in React, Next.js, Node.js, and cloud
               technologies.`,
   socialLinks: {
-    github: "https://www.github.com/Tejas19Tejam",
-    linkedin: "https://www.linkedin.com/in/vasudev-tejam/",
+    github: "https://github.com/Tejas19Tejam",
+    linkedin: "https://linkedin.com/in/vasudev-tejam/",
     email: "mailto:tejas19tejam@gmail.com",
   },
 };

@@ -126,10 +126,9 @@ function About() {
               <div>
                 <p className="text-muted-foreground leading-relaxed">
                   I thrive on transforming complex requirements into elegant,
-                  user-friendly solutions. From crafting intuitive frontends
-                  with React (TypeScript) and Next.js to building robust
-                  backends with Node.js, I bring a holistic approach to every
-                  project.
+                  user-friendly solutions. From crafting intuitive frontend with
+                  React (TypeScript) and Next.js to building robust backends
+                  with Node.js, I bring a holistic approach to every project.
                 </p>
               </div>
 
