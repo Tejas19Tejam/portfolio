@@ -302,7 +302,7 @@ function Experience() {
                 Let&apos;s Work Together
               </button>
               <button
-                onClick={() => window.open("/resume.pdf", "_blank")}
+                onClick={() => window.open("/docs/resume.pdf", "_blank")}
                 className="px-6 py-3 border border-border rounded-lg hover:bg-muted transition-colors"
               >
                 Download Resume

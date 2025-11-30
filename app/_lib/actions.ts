@@ -1,10 +1,17 @@
 "use server";
 
-export async function sendMail(emailData: any) {
-  const res = await fetch("http://localhost:3000/api/contact", {
+import { EmailData } from "@/app/_types/types";
+
+export async function sendMail(emailData: EmailData) {
+  const res = await fetch(`${process.env.SERVER_URL}/contact`, {
     method: "POST",
-    body: emailData,
+    headers: { "Content-Type": "application/json" },
+    body: JSON.stringify(emailData),
   });
 
-  return { data: "Response return from server action" };
+  console.log(process.env.SERVER_URL);
+
+  const data = await res.json();
+
+  return data;
 }
