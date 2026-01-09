@@ -18,10 +18,10 @@ function Contact() {
   const [isVisible, setIsVisible] = useState(false);
   const [isPending, startTransition] = useTransition();
   const [formData, setFormData] = useState({
-    name: "VASUDEV",
-    email: "tejas19tejam@gmail.com",
-    subject: "Request",
-    message: "Are you able to join",
+    name: "",
+    email: "",
+    subject: "",
+    message: "",
   });
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [submitStatus, setSubmitStatus] = useState<
