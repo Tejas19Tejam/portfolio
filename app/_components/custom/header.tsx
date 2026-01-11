@@ -105,7 +105,7 @@ function Header() {
                 Contact
               </Link>
               <Link
-                href={process.env.NEXT_PUBLIC_RESUME_URL}
+                href={process.env.NEXT_PUBLIC_RESUME_URL || ""}
                 target="_blank"
                 rel="noopener noreferrer"
                 className="w-full flex items-center justify-center gap-2 px-4 py-2 border border-border rounded-lg hover:bg-muted transition-colors"
