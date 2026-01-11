@@ -2,7 +2,6 @@
 
 import { useState, useEffect } from "react";
 import Link from "next/link";
-import { Button } from "@/app/_components/ui/button";
 import { Menu, X, Download } from "lucide-react";
 import Navigation from "./navigation";
 
@@ -18,11 +17,6 @@ function Header() {
     window.addEventListener("scroll", handleScroll);
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
-
-  const handleDownloadResume = () => {
-    // Add resume download functionality
-    window.open("/docs/resume.pdf", "_blank");
-  };
 
   return (
     <header
@@ -51,14 +45,15 @@ function Header() {
 
           {/* Resume Button & Mobile Menu Toggle */}
           <div className="flex items-center gap-4">
-            <Button
-              onClick={handleDownloadResume}
-              className="hidden sm:flex items-center gap-2"
-              variant="outline"
+            <Link
+              href={process.env.NEXT_PUBLIC_RESUME_URL || ""}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="hidden sm:flex items-center gap-2 px-4 py-2 border border-border rounded-lg hover:bg-muted transition-colors"
             >
               <Download size={16} />
               Resume
-            </Button>
+            </Link>
 
             {/* Mobile menu button */}
             <button
@@ -74,49 +69,51 @@ function Header() {
         {isMobileMenuOpen && (
           <div className="md:hidden absolute top-full left-0 right-0 bg-background/95 backdrop-blur-md border-b shadow-lg">
             <nav className="px-4 py-6 space-y-4">
-              <a
+              <Link
                 href="#about"
                 className="block py-2 text-foreground hover:text-primary transition-colors"
                 onClick={() => setIsMobileMenuOpen(false)}
               >
                 About
-              </a>
-              <a
+              </Link>
+              <Link
                 href="#skills"
                 className="block py-2 text-foreground hover:text-primary transition-colors"
                 onClick={() => setIsMobileMenuOpen(false)}
               >
                 Skills
-              </a>
-              <a
+              </Link>
+              <Link
                 href="#projects"
                 className="block py-2 text-foreground hover:text-primary transition-colors"
                 onClick={() => setIsMobileMenuOpen(false)}
               >
                 Projects
-              </a>
-              <a
+              </Link>
+              <Link
                 href="#experience"
                 className="block py-2 text-foreground hover:text-primary transition-colors"
                 onClick={() => setIsMobileMenuOpen(false)}
               >
                 Experience
-              </a>
-              <a
+              </Link>
+              <Link
                 href="#contact"
                 className="block py-2 text-foreground hover:text-primary transition-colors"
                 onClick={() => setIsMobileMenuOpen(false)}
               >
                 Contact
-              </a>
-              <Button
-                onClick={handleDownloadResume}
-                className="w-full flex items-center justify-center gap-2"
-                variant="outline"
+              </Link>
+              <Link
+                href={process.env.NEXT_PUBLIC_RESUME_URL}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="w-full flex items-center justify-center gap-2 px-4 py-2 border border-border rounded-lg hover:bg-muted transition-colors"
+                onClick={() => setIsMobileMenuOpen(false)}
               >
                 <Download size={16} />
                 Download Resume
-              </Button>
+              </Link>
             </nav>
           </div>
         )}

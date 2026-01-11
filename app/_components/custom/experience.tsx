@@ -2,6 +2,7 @@
 
 import { useState, useEffect, useRef } from "react";
 import { Calendar, MapPin, Briefcase, Award, TrendingUp } from "lucide-react";
+import Link from "next/link";
 
 function Experience() {
   const [isVisible, setIsVisible] = useState(false);
@@ -291,22 +292,20 @@ function Experience() {
               life.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <button
-                onClick={() =>
-                  document
-                    .getElementById("contact")
-                    ?.scrollIntoView({ behavior: "smooth" })
-                }
+              <Link
+                href="#contact"
                 className="px-6 py-3 bg-primary text-primary-foreground rounded-lg hover:bg-primary/90 transition-colors"
               >
                 Let&apos;s Work Together
-              </button>
-              <button
-                onClick={() => window.open("/docs/resume.pdf", "_blank")}
+              </Link>
+              <Link
+                href={process.env.NEXT_PUBLIC_RESUME_URL || ""}
+                target="_blank"
+                rel="noopener noreferrer"
                 className="px-6 py-3 border border-border rounded-lg hover:bg-muted transition-colors"
               >
                 Download Resume
-              </button>
+              </Link>
             </div>
           </div>
         </div>
