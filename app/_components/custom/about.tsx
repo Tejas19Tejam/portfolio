@@ -3,11 +3,6 @@
 import { useState, useEffect, useRef } from "react";
 import { Code2, Database, Palette, Server, Globe, Zap } from "lucide-react";
 
-const aboutSectionData = {
-  role: "Full Stack Developer",
-  experience: "3+",
-};
-
 function About() {
   const [isVisible, setIsVisible] = useState(false);
   const sectionRef = useRef<HTMLDivElement>(null);
@@ -53,7 +48,7 @@ function About() {
       icon: <Server className="w-8 h-8 text-green-500" />,
       title: "Backend Mastery",
       description:
-        "Building robust APIs and server-side solutions with Node.js and Django",
+        "Building robust APIs and server-side solutions with Node.js",
     },
     {
       icon: <Database className="w-8 h-8 text-purple-500" />,
@@ -114,7 +109,7 @@ function About() {
                 <p className="text-muted-foreground leading-relaxed">
                   With{" "}
                   <span className="font-semibold text-primary">
-                    2+ years of experience
+                    3+ years of experience
                   </span>{" "}
                   in full-stack development, I specialize in building modern,
                   scalable web applications. My journey began with a passion for
