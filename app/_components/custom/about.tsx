@@ -147,8 +147,9 @@ function About() {
                 <h4 className="font-semibold mb-2">Fun Fact</h4>
                 <p className="text-muted-foreground">
                   When I&apos;m not coding, you&apos;ll find me listening to
-                  music, reading about emerging technologies. I believe great
-                  software is built by passionate people! 🎶
+                  music, reading about emerging technologies on Medium or
+                  Dev.to. I believe great software is built by passionate
+                  people! 🎶
                 </p>
               </div>
             </div>
